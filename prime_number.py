@@ -1,12 +1,11 @@
 n = int(input())
-i=1
-x=0
-while i<=n/2 :
-    if n%i==0:
-        x+=1
-    i+=1
-    
-if x==1:
+x = 1
+c=0
+while x<=n//2:
+    if n%x==0:
+        c+=1
+    x+=1
+if c==1:
     print("prime")
 else:
     print("not a prime")
