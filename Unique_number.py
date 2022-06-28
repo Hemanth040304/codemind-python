@@ -1,13 +1,5 @@
 n = int(input())
-on=0
-tw=0
-th=0
-fo=0
-fi=0
-si=0
-se=0
-ei=0
-ni=0
+on,tw,th,fo,fi,si,se,ei,ni=0,0,0,0,0,0,0,0,0
 while n:
     if n%10==1:
         on+=1
