@@ -1,14 +1,13 @@
 n = int(input())
-first_number=0
-second_number=1
-next_number=0
-while next_number<=n:
-    next_number=first_number+second_number
-    first_number=second_number
-    second_number=next_number
-if n-first_number<next_number-n:
-    print(first_number)
-elif n-first_number==next_number-n:
-    print(first_number ,next_number)
+f,s = 0,1
+ne = f+s
+while ne<=n:
+    f=s
+    s=ne
+    ne=f+s
+if n-s<ne-n:
+    print(s)
+elif n-s>ne-n:
+    print(ne)
 else:
-    print(next_number)
+    print(s,ne)
