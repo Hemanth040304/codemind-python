@@ -1,6 +1,6 @@
 number = int(input())
 sum = 0
-while 1:
+while True:
     while number!=0:
         sum+=(number%10)**2
         number//=10
