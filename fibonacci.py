@@ -1,11 +1,9 @@
 n = int(input())
-first_number=0
-second_number=1
-print(first_number,end=' ')
-print(second_number,end=' ')
-while n!=2:
-    next_number=first_number+second_number
-    print(next_number,end=' ')
-    first_number=second_number
-    second_number=next_number
-    n-=1
+f,s = 0,1
+print(f,s,end=" ")
+while n-2:
+    ne = f+s
+    print(ne,end=" ")
+    f=s
+    s=ne
+    n -= 1
