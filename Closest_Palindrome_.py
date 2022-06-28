@@ -1,32 +1,32 @@
 def left_pal(x):
     temp = 0
-    rev_left = 0
+    rev = 0
     while 1:
         if temp==0:
-            temp = x#111
-            rev_left = 0
-        rev_left=rev_left*10+temp%10#11
-        temp//=10#1
-        if temp==0 and rev_left==x:#11==111
+            temp = x
+            rev = 0
+        rev=rev*10+temp%10
+        temp//=10
+        if temp==0 and rev==x:
             break
-        if temp==0 and rev_left!=x:#0
+        if temp==0 and rev!=x:
             x-=1
-    return rev_left    
+    return rev 
         
 def right_pal(right):
-    rev_right = 0
+    rev = 0
     temp = 0
     while 1:
         if temp==0:
             temp = right
-            rev_right = 0
-        rev_right=rev_right*10+temp%10
+            rev = 0
+        rev=rev*10+temp%10
         temp//=10
-        if temp==0 and rev_right==right:
+        if temp==0 and rev==right:
             break
-        if temp==0 and rev_right!=right:
+        if temp==0 and rev!=right:
             right+=1
-    return rev_right        
+    return rev  
             
 n = int(input())
 left = n-1
