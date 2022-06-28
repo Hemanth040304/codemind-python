@@ -1,16 +1,15 @@
 n = int(input())
 temp = n
-d = 0
-while temp:
-    d+=1
-    temp//=10
-number = n
-sum = 0
+su,rev=0,0
 while n:
-    sum+=(n%10)**d
+    rev=rev*10+n%10
     n//=10
-    d-=1
-if sum==number:
+i = 1
+while rev:
+    su+=(rev%10)**i
+    rev//=10
+    i += 1
+if su==temp:
     print(True)
 else:
     print(False)
