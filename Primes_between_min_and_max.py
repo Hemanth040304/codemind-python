@@ -1,24 +1,24 @@
-def isprime(n):
+def prime(n):
     if n==1:
-        return False
-    for i in range(2,n//2+1):
-        if n%i==0:
-            return False
-    return True
-c = 0
+        return 0
+    else:
+        for i in range(2,int(n**0.5)+1):
+            if n%i==0:
+                return 0
+        return 1
+
 n = int(input())
 arr = list(map(int,input().split()))
-mi=min(arr)
-mini=arr.index(mi)
-ma=max(arr)
-maxi=arr.index(ma)
-if mini>maxi:
-    for i in range(maxi,mini+1):
-        if isprime(arr[i]):
-            c+=1
-    print(c)
+ma = arr.index(max(arr))
+mi = arr.index(min(arr))
+count = 0
+if mi<ma:
+    for i in range(mi,ma+1):
+        if prime(arr[i]):
+            count+=1
+    print(count)
 else:
-    for i in range(mini,maxi+1):
-        if isprime(arr[i]):
-            c+=1
-    print(c)
+    for i in range(ma,mi+1):
+        if prime(arr[i]):
+            count+=1
+    print(count)
