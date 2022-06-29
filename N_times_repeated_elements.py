@@ -1,12 +1,11 @@
 n = int(input())
 arr = list(map(int,input().split()))
-t = int(input())
-count = 0
+k = int(input())
+a = []
 for i in range(n):
-    c=arr.count(arr[i])
-    if c==t:
-        print(arr[i],end=" ")
-        arr[i]=0
-        count+=1
-if count==0:
+    if arr.count(arr[i])==k and arr[i] not in a:
+        a.append(arr[i])
+if len(a)==0:
     print("-1")
+else:
+    print(*a)
