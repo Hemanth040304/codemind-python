@@ -1,8 +1,9 @@
-n = input()
-for i in range(0,len(n)):
-    c = n.count(n[i])
-    if c==1:
-        print(n[i])
+s = input().lower()
+x = 0
+for i in s:
+    if s.count(i)==1:
+        print(i)
+        x = 1
         break
-else:
+if x==0:
     print("-1")
