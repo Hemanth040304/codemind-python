@@ -1,11 +1,9 @@
 n = int(input())
-count=0
 arr = list(map(int,input().split()))
-for i in range(n):
-    c=arr.count(arr[i])
-    if c==arr[i]:
-        print(arr[i],end=" ")
-        arr[i]=0
-        count+=1
-if count==0:
+c = 0
+for i in sorted(set(arr),key=arr.index):
+    if arr.count(i)==i:
+        print(i,end=" ")
+        c = 1
+if c==0:
     print("-1")
