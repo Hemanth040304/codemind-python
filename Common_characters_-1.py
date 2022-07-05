@@ -1,7 +1,6 @@
 s = input().lower()
 s = s.split(" ")
 a = s[0]
-c = 0
 x = ''
 for i in a:
     count = 0
