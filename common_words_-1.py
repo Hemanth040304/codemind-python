@@ -1,9 +1,8 @@
-a = input()
-b = input()
-a , b = a.lower() , b.lower()
-a , b = a.split(" ") , b.split(" ")
+s1 = input().lower()
+s2 = input().lower()
+s1,s2=s1.split(" "),s2.split(" ")
 c = 0
-for i in range(0,len(a)):
-    if a[i] in b:
-        c += 1
+for i in s1:
+    if i in s2:
+        c+=1
 print(c)
