@@ -1,10 +1,7 @@
-n = input()
-n = n.split(" ")
-for i in range(len(n)):
+s = input().split(" ")
+for i in range(len(s)):
+    a = s[i]
     if i%2==0:
-        for j in range(len(n[i])-1,-1,-1):
-            print(n[i][j],end="")
+        print(a[::-1],end=" ")
     else:
-        for j in range(len(n[i])):
-            print(n[i][j],end="")
-    print(end=" ")
+        print(a,end=" ")
