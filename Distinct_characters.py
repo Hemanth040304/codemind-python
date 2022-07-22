@@ -1,7 +1,15 @@
 s = input().lower()
-s = s.replace(" ","")
-s = set(s)
-s = list(s)
-s.sort()
-for i in s:
-    print(i,end='')
+a = ''
+for i in set(s):
+    if s.count(i)==1:
+        a+=i
+a = list(a)
+a.sort()
+a = str(a)
+a=a.replace(" ","")
+a=a.replace("'","")
+a=a.replace("[","")
+a=a.replace("]","")
+a=a.replace(" ","")
+a=a.replace(",","")
+print(a)
