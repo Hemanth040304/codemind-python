@@ -1,2 +1,3 @@
-r = int(input())
-print(round(float(3.14*r*r),2))
+r=int(input())
+a=r*r*3.14
+print(a)
