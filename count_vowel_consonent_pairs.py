@@ -1,12 +1,13 @@
-v = 'aeiouAEIOU'
-c = 'qwrtypsdfghjklzmxncbvQWRTYPSDFGHJKLZMXNCBV'
 s = input()
-count=0
-l = len(s)-1
-f=0
-while f<l:
-    if (((s[f] in v) and (s[l] in c)) or ((s[f] in c) and (s[l] in v))):
-        count+=1
-    f+=1
-    l-=1
-print(count)
+c = 0 
+v = 'AEIOUaeiou'
+Co = 'qwrtypsdfghjklzxcvbnmQWrTYPSDFGHJKLZMXNCBV'
+x=0
+y=len(s)-1
+while x<y:
+    if((s[x] in v and s[y] in Co)or(s[x] in Co and s[y] in v)):
+        c+=1
+        #print(s[x],s[y])
+    x+=1
+    y-=1
+print(c)
