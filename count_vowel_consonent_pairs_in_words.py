@@ -1,8 +1,12 @@
-s=list(map(str,input().split()))
-v='AEIOUaeiou'
+s = input().split(" ")
+v = 'aeiouAEIOU'
 c=0
 for i in s:
-    for j in range(len(i)//2):
-        if ((i[j] in v) and i[len(i)-j-1] not in v)or ((i[j]not in v) and i[len(i)-j-1]in v):
+    x=0
+    y=len(i)-1
+    while x<y:
+        if((i[x] in v and i[y] not in v)or(i[x] not in v and i[y] in v)):
             c+=1
+        x+=1
+        y-=1
 print(c)
