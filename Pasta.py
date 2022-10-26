@@ -1,18 +1,12 @@
 n,m = map(int,input().split())
 a = list(map(int,input().split()))
 b = list(map(int,input().split()))
-c = 0
-#print(n,m)
-#print(a)
-#print(b)
-se = set(b)
-if len(se)==len(b):
-    for i in b:
-        if i in a:
-            c+=1
-    if c==len(b):
-        print("Yes")
-    else:
-        print("No")
+for i in range(m):
+    if b[i] in a:
+        ind = a.index(b[i])
+        a[ind]=0
+        b[i]=0
+if len(b)==b.count(0):
+    print("Yes")
 else:
     print("No")
